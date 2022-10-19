@@ -23,6 +23,9 @@
 **Other info**
 
 - var variables can be re-declared and updated
+
 - let can be updated but not re-declared.
+
 - const can't be updated and can't be re-declared
+
 - const variable declaration and initialization must be done on the same line.
