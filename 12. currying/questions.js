@@ -52,3 +52,18 @@
 // };
 
 // console.log(sum(10)(10, 20));
+
+// * Write a function which does this : add(10)(20) and add(10,20)
+
+// function add(...num1) {
+//   if (num1.length > 1) {
+//     console.log(num1.reduce((initialVal, n) => initialVal + n, 0));
+//   } else {
+//     return function (num2) {
+//       console.log(Number(num1) + num2);
+//     };
+//   }
+// }
+
+// add(1)(2);
+// add(1, 2);

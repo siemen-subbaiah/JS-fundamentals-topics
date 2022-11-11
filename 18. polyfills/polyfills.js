@@ -138,3 +138,5 @@
 
 // const accessFunc = accessName.myBind(obj, 'hello');
 // accessFunc('hello2');
+
+

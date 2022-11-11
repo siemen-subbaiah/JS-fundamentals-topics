@@ -191,65 +191,65 @@ display();
 
 // * 5. Output Question
 
-function Job() {
-  return new Promise((resolve, reject) => {
-    reject();
-  });
-}
+// function Job() {
+//   return new Promise((resolve, reject) => {
+//     reject();
+//   });
+// }
 
-let promise = Job();
+// let promise = Job();
 
-promise
-  .then(() => console.log('success 1'))
-  .then(() => console.log('success 2'))
-  .then(() => console.log('success 3'))
-  .catch(() => console.log('error 1'))
-  .then(() => console.log('success 5'));
+// promise
+//   .then(() => console.log('success 1'))
+//   .then(() => console.log('success 2'))
+//   .then(() => console.log('success 3'))
+//   .catch(() => console.log('error 1'))
+//   .then(() => console.log('success 5'));
 
 // * 6. Promise Chaining
 
-const firstPromise = new Promise((resolve, reject) => {
-  resolve('First');
-});
+// const firstPromise = new Promise((resolve, reject) => {
+//   resolve('First');
+// });
 
-const secondPromise = new Promise((resolve, reject) => {
-  resolve(firstPromise);
-});
+// const secondPromise = new Promise((resolve, reject) => {
+//   resolve(firstPromise);
+// });
 
-secondPromise
-  .then((data) => {
-    return data;
-  })
-  .then((data) => console.log(data));
+// secondPromise
+//   .then((data) => {
+//     return data;
+//   })
+//   .then((data) => console.log(data));
 
 //  * 7 Rewrite this example code using async/await instead of.then/catch
 
-function loadJson1(url) {
-  return fetch(url).then((response) => {
-    if (response.status == 200) {
-      return response.json();
-    } else {
-      throw new Error(response.status);
-    }
-  });
-}
+// function loadJson1(url) {
+//   return fetch(url).then((response) => {
+//     if (response.status == 200) {
+//       return response.json();
+//     } else {
+//       throw new Error(response.status);
+//     }
+//   });
+// }
 
-loadJson1('https://fakeurl.com/no-such-user.json').catch((err) =>
-  console.log(err)
-);
+// loadJson1('https://fakeurl.com/no-such-user.json').catch((err) =>
+//   console.log(err)
+// );
 
 // * REWRITE!
-const loadJson2 = async (url) => {
-  try {
-    const res = await fetch(url);
-    if (res.status === 200) {
-      return res.json();
-    } else {
-      throw new Error(res.status);
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
+// const loadJson2 = async (url) => {
+//   try {
+//     const res = await fetch(url);
+//     if (res.status === 200) {
+//       return res.json();
+//     } else {
+//       throw new Error(res.status);
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
-loadJson2('https://fakeurl.com/no-such-user.json');
+// loadJson2('https://fakeurl.com/no-such-user.json');

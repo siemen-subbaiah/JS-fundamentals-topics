@@ -85,3 +85,27 @@
 //   console.log('After: ', a);
 // }
 // hoistExample();
+
+// * 9. Output question
+
+// var rate = 10;
+// function getRate() {
+//   if (rate === undefined) {
+//     var rate = 6;
+//     return rate;
+//   } else {
+//     return 10;
+//   }
+// }
+
+// console.log('Rate is ', getRate());
+
+// * 10. Explain the scope of TDZ!
+
+// {
+// TDZ STARTS!
+//   const func = () => console.log(letVar);
+//   TDZ ZONE!
+//   let letVar = 3; //TDZ ENDS!
+//   func();
+// }

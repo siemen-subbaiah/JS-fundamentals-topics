@@ -99,6 +99,40 @@ function nothingMuch() {
 wassup(nothingMuch());
 ```
 
+## Pure Function
+
+- A Pure Function is a function (a block of code) that always returns the same result if the same arguments are passed
+
+```
+function add(num1,num2){
+  return num1+num2
+}
+add(2,3)
+```
+
+## Higher order Function
+
+- A function which takes another function as an argument or returns a function is known as a higher order function.
+
+```
+const numbers = [1,2,3,4,5]
+
+function filterNumbers(callbackFn,numbArr){
+  const temp = [];
+  for(let i = 0;i<numbArr.length;i++){
+    callbackFn(numbArr[i]) && temp.push(numbArr[i])
+  }
+  return temp;
+}
+
+function isEven(x){
+  return x % 2 === 0
+}
+
+filterNumbers(isEven,numbers)
+
+```
+
 **Functions are first class citizens in JavaScript because of the behaviour of first class functions**
 
 ### Difference between parameters and arguments
