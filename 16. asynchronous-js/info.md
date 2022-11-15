@@ -4,7 +4,7 @@
 
 - Blocking: code waits for the first function to be executed, unless the first function is being executed the second function does not run.
 
-- single threaded: : Each thread can do only one task and hence here it is single threaded
+- Single threaded: Each thread can do only one task and hence here it is single threaded
 
 **To solve this Asynchronous JavaScript comes in. Here with some external web API's such as setTimeout, promises we can let our code run other operations at the same time without blocking the main thread.**
 
@@ -53,16 +53,29 @@ Promise is a JavaScript object which has two main parts:
 
 - Whatever is being passed inside the resolve can be used inside the then or can be used by assigning a value to the await keyword value
 
-- Promise.reject and Promise.resolve is used to directly resolve or reject a promise!
+- Promise.reject and Promise.resolve is used to directly
+  resolve or reject a promise!
+
+### Promise Chaining
+
+- The idea is that the new result or a new promise itself is passed through the chain of .then handlers.
+
+- Returning promises allows us to build chains of asynchronous actions.
 
 ### Promise Combinators
 
 - Promise Combinators are utility methods to deal with multiple promises that need to be executed in parallel.
 
-- **Promise.all()** : This takes in an array of promises and executes all of them, and if one of them as an error then it stops the execution
+- **Promise.all()** : This takes in an array of promises and executes all of them, and if one of them as an error then it stops the execution and none of the results are not resolved and the error is catched
 
-- **Promise.race()** : This takes in an array of promises and resolves the first one, and if one of them as an error then it stops the execution
+- **Promise.allSettled()** : This takes in an array of promises and executes all of them, and even if one of them as an error it does not stop the execution and results are resolved and the error is also catched
 
-- **Promise.allSettled()** : This takes in an array of promises and executes all of them, and even if one of them as an error then it returns all of the promises
+- **Promise.race()** : This takes in an array of promises and resolves only the first one, and it either resolves the first one if it has no error or rejects the first one if it has an error, it does not go to the second promise at all.
 
-- **Promise.any()** : This takes in an array of promises and resolves the first one, and even if one of them as an error then it still returns the first promise, it only rejects if all of the promises has an error
+- **Promise.any()** : This takes in an array of promises but waits only for the first fulfilled promise and gets its result. If all of the given promises are rejected, then the returned promise is rejected with AggregateError
+
+### Difference b/w async/await and .then(handler)
+
+- In sync/await first the promises are being resolved then the further code is being run, basically whatever is being written after the promise consuming will be held and executed only when the above code is finished running!
+
+- In .then all the other code will be executed first and then only the promise consuming code will be executed

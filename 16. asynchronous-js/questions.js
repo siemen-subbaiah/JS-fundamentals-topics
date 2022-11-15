@@ -253,3 +253,25 @@ display();
 // };
 
 // loadJson2('https://fakeurl.com/no-such-user.json');
+
+// * 8 Promise Chaining
+// * a. new result is being passed through the chain of .then(handler)
+
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve(2);
+//   }, 1000);
+// })
+//   .then((data) => {
+//     console.log(data);
+//     return data * 2;
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   });
+
+// * b.  handler, used in .then(handler) may create and return a promise.
+
+// fetch('https://www.github.com/api/users')
+//   .then((res) => res.json())
+//   .then((data) => console.log(data));
