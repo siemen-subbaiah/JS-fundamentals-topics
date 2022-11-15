@@ -16,7 +16,7 @@
 
 - let and const are block scoped (meaning when the program runs let and const declared variables are being stored in a different memory space which is outside of the global scope)
 
-- Shadowing is a concept of using the same variable names in both inner scope and outer scope.
+- Shadowing is a concept of using the same variable names in both inner scope and outer scope .
 
 - Illegal Shadowing is trying to shadow a let variable with a var variable
 
@@ -29,3 +29,7 @@
 - const can't be updated and can't be re-declared
 
 - const variable declaration and initialization must be done on the same line.
+
+- If let and const varibles are declared globally then it goes to something called as **Script** instead of **Global**
+
+- But if these let and const declared variables are declared in a block, then it goes to something called as **Block** instead of **Script**

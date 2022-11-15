@@ -8,7 +8,7 @@ Parent.prototype.sayFamilyName = function () {
 };
 
 function Child(parentNames, familyName, name) {
-  Parent.call(this, parentNames, familyName); //Object inheritance
+  Parent.call(this, parentNames, familyName); //Constructor Object inheritance
   this.name = name;
 }
 

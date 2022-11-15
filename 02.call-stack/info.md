@@ -1,4 +1,4 @@
-**In JavaScript call stack is a mechanism where whenever a function invocation has been made, it is automatically added to the Call Stack. Once the function has executed all of its code, it is automatically removed from the Call Stack.**
+**In JavaScript call stack is a mechanism where whenever a function invocation has been made, it is automatically added to the call Stack. Once the function has executed all of its code, it is automatically removed from the call Stack.**
 
 - When the program is first loaded, a global execution context is being pushed in the stack
 

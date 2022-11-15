@@ -1,6 +1,6 @@
 **Function along with it's lexical scope bundled together forms a closure**
 
-**When a function is returned in any of the function it returns both the function itself and it's lexical scope**
+**When a function is returned in any of the function it returns both the function itself and it's lexical scope bundled together!**
 
 ```
 // function outer() {
@@ -16,14 +16,7 @@
 
 - 👆🏼 so here even if the nameIs() is invoked in any other scope, it remembers the outer lexical environment
 
-**Lexical Scope** : These are when variables which are globally defined, outside of the function can be used in any function and can't be the other way around!
-
-Uses of closures:
-
-- Variables can be shared among the sibling functions in the same scope
-- With closures it is possible to have private variables to a function
-- Can be used in function currying
-- Can be used in functions like memoization() and once()
+**Lexical Scope** : Lexical scope simply means local memory of a function + local memory of the parents function.
 
 ### Closure scope chain:
 
@@ -40,6 +33,13 @@ Every closure has three scopes:
 Closures : If a function returns another function, it can access the lexical scope of it's outer function!
 
 Scope : It tells the context of how the variables can be accessed!
+
+### Uses of closures:
+
+- Variables can be shared among the sibling functions in the same scope
+- With closures it is possible to have private variables to a function (Encapsulation)
+- Can be used in function currying
+- Can be used in functions like memoization() and once()
 
 ### Disadvantages of closures
 

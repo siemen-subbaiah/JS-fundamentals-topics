@@ -10,6 +10,8 @@
 
 - Event Bubbling is used by default
 
+- There is no bubblin in focus event
+
 - This can be achieved by passing a third argument to the addEventListener method called ‘useCapture’ which can be just put as true or false (true means it is event capturing)
 
 - Event propagation can be stopped by using the event object in the callback function (stopPropagation)

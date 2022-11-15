@@ -11,11 +11,15 @@
 
 - Prototype is being used to add in new properties and methods to the constructor
 
+- Properties and methods gets added to the [[Prototype]]
+
 ## Inheritance (Using constructors)
 
 - In javascript, inheriting the properties of one object to another object is called inheritance
 
 - A parent object's prototype can also be inherited by any other object
+
+- While inheriting, it does not go to the [[Prototype]]
 
 ## Class
 

@@ -15,6 +15,8 @@ function run1(){
 
 - Scope Chain is the chain of all the lexical environments
 
+- Block is a place where multiple js statements can be combined in a group, starts and ends with a bracket
+
 - ## Three types of scopes:
 
 1. Global scope
