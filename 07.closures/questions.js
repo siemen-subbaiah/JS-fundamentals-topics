@@ -161,3 +161,63 @@
 // count2();
 
 // * Each time a refernce is made to the counter(), a separate independent copy is being made!
+
+// * Output Question and correct it
+
+// function createIncrement() {
+//   let count = 0;
+//   function increment() {
+//     count++;
+//   }
+//   let message = `Count is ${count}`;
+//   function log() {
+//     console.log(message);
+//   }
+
+//   return [increment, log];
+// }
+// const [increment, log] = createIncrement();
+// increment();
+// increment();
+// increment();
+// log(); // What is logged?
+
+// * Corrected:
+// function createIncrement() {
+//   let count = 0;
+//   function increment() {
+//     count++;
+//   }
+//   function log() { // - This forms closure with count
+//     let message = `Count is ${count}`;
+//     console.log(message);
+//   }
+
+//   return [increment, log];
+// }
+// const [increment, log] = createIncrement();
+// increment();
+// increment();
+// increment();
+// log();
+
+// * Achieve this:
+// calculate('+')(1)(2);
+// calculate('*')(2)(3);
+
+// * ANS:
+// function calculate(type) {
+//   if (type === '+') {
+//     return function (num1) {
+//       return function (num2) {
+//         console.log(num1 + num2);
+//       };
+//     };
+//   } else if (type === '*') {
+//     return function (num1) {
+//       return function (num2) {
+//         console.log(num1 * num2);
+//       };
+//     };
+//   }
+// }
