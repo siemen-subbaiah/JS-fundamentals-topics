@@ -67,3 +67,58 @@
 
 // add(1)(2);
 // add(1, 2);
+
+// * Write a function which does this :
+// add(3)
+// add(5)
+// add(5)
+// add() should log 10
+
+// const curryFn = () => {
+//   let prevSum = 0;
+//   return function (num) {
+//     if (arguments.length === 0) {
+//       console.log(prevSum);
+//     } else {
+//       prevSum = prevSum + num;
+//     }
+//   };
+// };
+
+// const add = curryFn()
+
+// add(3)
+// add(5)
+// add(55)
+
+// * Write a function which does this:
+// sum(1)(2)((result) => console.log('result', result));
+
+// function sum(num1) {
+//   return function (num2) {
+//     return function (callbackFn) {
+//       const result = num1 + num2;
+//       return callbackFn(result);
+//     };
+//   };
+// }
+
+// sum(1)(2)((result) => console.log('result', result));
+
+// * // * Write a function which does this:
+// curried(2,3)(4)()
+
+// function curried(...args) {
+//   const sum1 = args.reduce((sum, current) => sum + current, 0);
+//   return function (...args) {
+//     const sum2 = args.reduce((sum, current) => sum + current, 0);
+//     if (sum2) {
+//       return curried(sum1 + sum2);
+//     }
+//     return sum1;
+//   };
+// }
+
+// console.log(curried(2, 3)(4)());
+
+// https://medium.com/@pranjali.roy/currying-interview-questions-2a6823867551
