@@ -81,7 +81,7 @@ starIceCream2().then((data) => {
   });
 });
 
-// * RETURNING THE PROMISE!
+// * RETURNING THE PROMISE! (PROMISE CHAINING!)
 starIceCream2()
   .then((data) => {
     console.log(data);
@@ -103,13 +103,13 @@ Promise.all([starIceCream2(), putToppings2(), makeTheCone2()]).then((res) =>
 );
 
 // * 2.
-Promise.race([starIceCream2(), putToppings2(), makeTheCone2()]).then((res) =>
-  console.log(res)
+Promise.allSettled([starIceCream2(), putToppings2(), makeTheCone2()]).then(
+  (res) => console.log(res)
 );
 
 // * 3.
-Promise.allSettled([starIceCream2(), putToppings2(), makeTheCone2()]).then(
-  (res) => console.log(res)
+Promise.race([starIceCream2(), putToppings2(), makeTheCone2()]).then((res) =>
+  console.log(res)
 );
 
 // * 4.

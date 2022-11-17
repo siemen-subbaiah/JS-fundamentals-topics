@@ -26,6 +26,8 @@ Disadvantages of callbacks:
 
 ## Promises
 
+**MDN: The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.**
+
 Promise is a JavaScript object which has two main parts:
 
 1. Promise state
@@ -56,9 +58,11 @@ Promise is a JavaScript object which has two main parts:
 - Promise.reject and Promise.resolve is used to directly
   resolve or reject a promise!
 
+- The finally block doesn’t receive any value, and anything returned from finally is not considered in the next then block so the output from the last then is used.
+
 ### Promise Chaining
 
-- The idea is that the new result or a new promise itself is passed through the chain of .then handlers.
+- The idea is that the new result or a new promise itself is being returned through the chain of .then handlers.
 
 - Returning promises allows us to build chains of asynchronous actions.
 
@@ -76,6 +80,6 @@ Promise is a JavaScript object which has two main parts:
 
 ### Difference b/w async/await and .then(handler)
 
-- In sync/await first the promises are being resolved then the further code is being run, basically whatever is being written after the promise consuming will be held and executed only when the above code is finished running!
+- In async/await first the promises are being resolved then the further code is being run, basically whatever is being written after the promise consuming will be held and executed only when the above code is finished running!
 
 - In .then all the other code will be executed first and then only the promise consuming code will be executed
