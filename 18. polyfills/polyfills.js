@@ -139,4 +139,25 @@
 // const accessFunc = accessName.myBind(obj, 'hello');
 // accessFunc('hello2');
 
+// * POLYFILL FOR PROMISE.ALL!
 
+// function myPromiseAll(promises) {
+//   const output = [];
+
+//   return new Promise((resolve, reject) => {
+//     promises.forEach((promise, i) => {
+//       promise
+//         .then((res) => {
+//           output.push(res);
+//           if (i === promises.length - 1) {
+//             resolve(output);
+//           }
+//         })
+//         .catch((err) => reject(err));
+//     });
+//   });
+// }
+
+// myPromiseAll([Promise.resolve(2), Promise.resolve('roc8')]).then((res) =>
+//   console.log(res)
+// );
