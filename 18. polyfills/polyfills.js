@@ -191,7 +191,7 @@
 //   return function (...args) {
 //     const argsCache = JSON.stringify(args);
 //     if (!res[argsCache]) {
-//       res[argsCache] = callbackFn.call(this, ...args); // callbackFn()
+//       res[argsCache] = callbackFn.call(this, ...args); // callbackFn(args)
 //     }
 //     return res[argsCache];
 //   };
