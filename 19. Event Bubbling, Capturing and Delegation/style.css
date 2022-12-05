@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.first {
+  border: 1px solid red;
+  padding: 10px;
+  margin: 10px;
+}
+
+.second {
+  border: 1px solid green;
+  padding: 20px;
+  margin: 10px;
+}
+
+.third {
+  border: 1px solid brown;
+  padding: 30px;
+  margin: 10px;
+}
+
+.cards {
+  margin-top: 10px;
+  display: flex;
+}
+.card {
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+  margin: 0.5rem;
+}

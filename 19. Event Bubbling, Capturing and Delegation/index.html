@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event prpogation</title>
+    <link rel="stylesheet" href="/19. Event Bubbling, Capturing and Delegation/style.css">
+</head>
+
+<body>
+
+    <!-- Event bubbling,capturing -->
+    <div class="first">
+        <div class="second">
+            <div class="third"></div>
+        </div>
+    </div>
+
+    <!-- Event delegation -->
+
+    <div class="cards">
+        <div data-info="batman" class="card"></div>
+        <div data-info="superman" class="card"></div>
+        <div data-info="spiderman" class="card"></div>
+        <div data-info="hulk" class="card"></div>
+        <div data-info="moonknight" class="card"></div>
+        <div data-info="ironman" class="card"></div>
+    </div>
+
+
+    <script src="/19. Event Bubbling, Capturing and Delegation/script.js"></script>
+</body>
+
+</html>

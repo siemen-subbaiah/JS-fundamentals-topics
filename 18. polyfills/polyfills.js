@@ -161,3 +161,38 @@
 // myPromiseAll([Promise.resolve(2), Promise.resolve('roc8')]).then((res) =>
 //   console.log(res)
 // );
+
+// * POLYFILL FOR FLAT!
+
+// Array.prototype.myFlat = function () {
+//   const outputArr = [];
+
+//   function flatten(context) {
+//     for (let i = 0; i < context.length; i++) {
+//       if (Array.isArray(context[i])) {
+//         flatten(context[i]);
+//       } else {
+//         outputArr.push(context[i]);
+//       }
+//     }
+//     return outputArr;
+//   }
+//   return flatten(this);
+// };
+
+// const arr = [1, 2, [[1, 2, [2]]]];
+// console.log(arr.myFlat());
+
+// * Memoization/caching function
+
+// function memoize(callbackFn) {
+//   const res = {};
+
+//   return function (...args) {
+//     const argsCache = JSON.stringify(args);
+//     if (!res[argsCache]) {
+//       res[argsCache] = callbackFn.call(this, ...args); // callbackFn()
+//     }
+//     return res[argsCache];
+//   };
+// }
