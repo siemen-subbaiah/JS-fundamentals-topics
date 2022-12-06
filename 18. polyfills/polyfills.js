@@ -183,6 +183,39 @@
 // const arr = [1, 2, [[1, 2, [2]]]];
 // console.log(arr.myFlat());
 
+// * POLYFILL FOR structuredClone (deepclone)!
+
+// function deepClone(obj){
+
+//   const copiedObj = {}
+//   for(let key in obj){
+//     if(typeof obj[key]!=='object' || Array.isArray(obj[key])){
+//       copiedObj[key]=obj[key]
+//     }else{
+//       copiedObj[key]=deepClone(obj[key])
+//     }
+//   }
+
+//   return copiedObj
+
+// }
+
+// const obj = {
+//   name:'siemen',
+//   age:20,
+//   otherInfo:{
+//     subInfo:{
+//       lastName:'subbaiah'
+//     }
+//   }
+// }
+
+// const obj2 = deepClone(obj)
+// obj2.otherInfo.subInfo.lastName = 'K K'
+
+// console.log(obj.otherInfo.subInfo);
+// console.log(obj2.otherInfo.subInfo);
+
 // * Memoization/caching function
 
 // function memoize(callbackFn) {
