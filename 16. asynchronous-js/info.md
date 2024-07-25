@@ -78,8 +78,16 @@ Promise is a JavaScript object which has two main parts:
 
 - **Promise.any()** : This takes in an array of promises but waits only for the first settled promise and gets its result. If all of the given promises are rejected, then the returned promise is rejected with AggregateError
 
+### async/await
+
+- **async** : async is a keyword in javascript to make a function asynchronous
+- This type of function will always return a promise
+
+- **async/await** : This combo is used to handle promises
+- await keyword can only be used inside an async function
+
 ### Difference b/w async/await and .then(handler)
 
-- In async/await first the promises are being resolved then the further code is being run, basically whatever is being written after the promise consuming will be held and executed only when the above code is finished running!
+- In async/await first the promises are being settled first then the further code is being run, basically whatever is being written after the promise consuming will be held and executed only when the above code is finished running!
 
 - In .then all the other code will be executed first and then only the promise consuming code will be executed
