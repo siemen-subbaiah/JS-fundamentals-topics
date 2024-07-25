@@ -74,9 +74,9 @@ Promise is a JavaScript object which has two main parts:
 
 - **Promise.allSettled()** : This takes in an array of promises and executes all of them, and even if one of them as an error it does not stop the execution and results are resolved and the error is also catched
 
-- **Promise.race()** : This takes in an array of promises and resolves only the first one, and it either resolves the first one if it has no error or rejects the first one if it has an error, it does not go to the second promise at all.
+- **Promise.race()** : This takes in an array of promises and resolves only the first settled promise, and it either resolves the first one if it has no error or rejects the first one if it has an error, it does not go to the second promise at all.
 
-- **Promise.any()** : This takes in an array of promises but waits only for the first fulfilled promise and gets its result. If all of the given promises are rejected, then the returned promise is rejected with AggregateError
+- **Promise.any()** : This takes in an array of promises but waits only for the first settled promise and gets its result. If all of the given promises are rejected, then the returned promise is rejected with AggregateError
 
 ### Difference b/w async/await and .then(handler)
 
